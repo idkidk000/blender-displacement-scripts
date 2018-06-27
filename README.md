@@ -1,6 +1,7 @@
 # blender-displacement-scripts
 
 all editable variables are at the top of the scripts and have uppercase names.
+
 open the script in blender as a text file, select your object in the viewport and click "run script".
 
 sci-fi-panelling.py
