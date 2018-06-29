@@ -1,18 +1,32 @@
 # blender displacement scripts
+* all editable variables are at the top of the scripts and have uppercase names.
+* open the script in blender as a text file, select your object in the viewport and click "run script".
 
-all editable variables are at the top of the scripts and have uppercase names.
+### sci-fi-panelling.py
+* subdivides the mesh if it has fewer than SUBDIV_MIN_VERTS.
+* randomly selects verts and edge loops, recursively expands and shrinks the selection, and assigns weights to a vertex group. 
+* adds a displacement modifier, edge split and smooth shading. 
+* works best on high poly meshes where all faces are similar sized quads.
 
-open the script in blender as a text file, select your object in the viewport and click "run script".
+### vertex-weight-mix.py
+* creates a vertex group using combined weights from all all other groups.
 
+### mark-weight-edges-sharp.py
+* marks inner and/or outer edges of quantitized vertex weights as sharp.
 
-# sci-fi-panelling.py
-* randomly selects verts and edge loops, expands and shrinks the selection, and assigns weights to a vertex group. adds a displacement modifier, edge split and smooth shading. works best with 10k+ verts
+### extrude-on-normals-by-vertex-weight.py
+* does exactly what the script's called. 
+* weights are quantitized before extrusion.
 
-# vertex-weight-mix.py
-* combines all vertex groups. weights are divided by number of groups to keep values between 0 and 1
+# q&a
+*what can i do with these scripts?*
+* https://github.com/johnakki/blender-displacement-scripts/blob/master/example.JPG
+* https://github.com/johnakki/blender-displacement-scripts/blob/master/example2.JPG
+* https://youtu.be/6LW3J4h2jVM
 
-# mark-weight-edges-sharp.py
-* marks inner and/or outer edges of quantitized vertex weights as sharp
+*why is your python code so terrible?*
+* you must have at least 50,000 iq to understand my highly optimized algorithms.
 
-# extrude-on-normals-by-vertex-weight.py
-* does exactly what the script's called. weights are quantitized before extrusion.
+*how should i spend my life savings?*
+* https://www.blender.org/foundation/donation-payment/
+* https://my.fsf.org/donate
